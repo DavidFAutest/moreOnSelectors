@@ -13,6 +13,11 @@ class FormPage extends Page {
      get inputEmail() {
           return $("#mail"); //uses CSS query selector
      }
+
+     // Error text
+    get errorText() {
+        return $('.error-text')
+    }
      
      // Submit Button Selector
      get submit() {
@@ -32,6 +37,9 @@ class FormPage extends Page {
       */
      open() {
           return super.open('');
+     }
+     get interest() {
+          return $('#title option:nth-child(3)'); // //uses CSS query selector (class)
      }
 }
 
